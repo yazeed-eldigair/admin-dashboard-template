@@ -4,15 +4,29 @@
     .homeContainer {
         flex: 6;
 
-        .widgets, .charts {
+        .widgets,
+        .charts {
             display: flex;
             padding: 20px;
             gap: 20px;
-            
+
         }
 
-        .charts{
+        .charts {
             padding: 5px 20px;
+        }
+
+        .listContainer {
+            --webkit-box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.17);
+            box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.17);
+            padding: 10px;
+            margin: 20px;
+
+            .listTitle {
+                font-weight: 500;
+                color: gray;
+                margin-bottom: 15px;
+            }
         }
     }
 }
