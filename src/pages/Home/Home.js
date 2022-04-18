@@ -6,7 +6,7 @@ import TransactionsTable from '../../components/Table/Table';
 import Widget from '../../components/Widget/Widget';
 import './Home.scss';
 
-export const Home = () => {
+export const Home = ({aspect, title}) => {
   return (
     <div className='home'>
         <Sidebar/>
@@ -20,7 +20,7 @@ export const Home = () => {
           </div>
           <div className="charts">
             <Featured/>
-            <Chart/>
+            <Chart aspect={2/1} title={"Last 6 Months (Revenue)"}/>
           </div>
           <div className="listContainer">
             <div className="listTitle">

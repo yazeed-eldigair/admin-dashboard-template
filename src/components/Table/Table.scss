@@ -8,7 +8,22 @@
             height: 32px;
             border-radius: 50%;
             margin-right: 10px;
-            object-fit: cover;
+            object-fit: scale-down;
+            border: 0.3px solid rgb(192, 192, 192);
+        }
+    }
+    .status {
+        padding: 5px;
+        border-radius: 5px;
+        background-color: coral;
+
+        &.Approved {
+            color: green;
+            background-color: rgba(0,128,0,0.151);
+        }
+        &.Pending {
+            color: goldenrod;
+            background-color: rgba(189,189,3,0.121);
         }
     }
 }

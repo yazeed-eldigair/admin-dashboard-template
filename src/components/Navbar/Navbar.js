@@ -6,8 +6,13 @@ import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import ChatBubbleRoundedIcon from '@mui/icons-material/ChatBubbleRounded';
 import FormatListBulletedRoundedIcon from '@mui/icons-material/FormatListBulletedRounded';
 import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
 
 const Navbar = () => {
+
+  const {dispatch} = useContext(DarkModeContext);
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -21,7 +26,7 @@ const Navbar = () => {
             English
           </div>
           <div className="item">
-            <DarkModeRoundedIcon className='icon'/>
+            <DarkModeRoundedIcon className='icon' onClick={()=>dispatch({type:"TOGGLE"})}/>
           </div>
           <div className="item">
             <FullscreenExitRoundedIcon className='icon'/>
