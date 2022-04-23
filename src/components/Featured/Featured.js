@@ -27,7 +27,7 @@ const Featured = () => {
             <div className="itemResult positive">
               <KeyboardArrowUpRoundedIcon fontSize={"small"}/>
               <div className="resultAmount">
-                $13.2k
+                $14.6k
               </div>
             </div>
           </div>
