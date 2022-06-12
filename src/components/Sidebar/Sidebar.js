@@ -1,28 +1,27 @@
-import "./Sidebar.scss";
-import DashboardRoundedIcon from "@mui/icons-material/DashboardRounded";
-import PeopleAltRoundedIcon from "@mui/icons-material/PeopleAltRounded";
-import CategoryRoundedIcon from "@mui/icons-material/CategoryRounded";
-import Inventory2RoundedIcon from "@mui/icons-material/Inventory2Rounded";
-import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
-import QueryStatsRoundedIcon from "@mui/icons-material/QueryStatsRounded";
-import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
-import HealthAndSafetyRoundedIcon from "@mui/icons-material/HealthAndSafetyRounded";
-import TextSnippetRoundedIcon from "@mui/icons-material/TextSnippetRounded";
-import SettingsIcon from "@mui/icons-material/Settings";
-import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
-import ExitToAppRoundedIcon from "@mui/icons-material/ExitToAppRounded";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { DarkModeContext } from "../../context/darkModeContext";
+import './Sidebar.scss';
+import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
+import PeopleAltRoundedIcon from '@mui/icons-material/PeopleAltRounded';
+import CategoryRoundedIcon from '@mui/icons-material/CategoryRounded';
+import Inventory2RoundedIcon from '@mui/icons-material/Inventory2Rounded';
+import LocalShippingRoundedIcon from '@mui/icons-material/LocalShippingRounded';
+import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
+import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
+import HealthAndSafetyRoundedIcon from '@mui/icons-material/HealthAndSafetyRounded';
+import TextSnippetRoundedIcon from '@mui/icons-material/TextSnippetRounded';
+import SettingsIcon from '@mui/icons-material/Settings';
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import ExitToAppRoundedIcon from '@mui/icons-material/ExitToAppRounded';
+import {Link} from 'react-router-dom';
+import {useContext} from 'react';
+import {DarkModeContext} from '../../context/darkModeContext';
 
 export const Sidebar = () => {
-
   const {dispatch} = useContext(DarkModeContext);
 
   return (
     <div className="sidebar">
       <div className="top">
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{textDecoration: 'none'}}>
           <span className="logo">adminpanel</span>
         </Link>
       </div>
@@ -35,17 +34,17 @@ export const Sidebar = () => {
             <span>Dashboard</span>
           </li>
           <p className="title">LISTS</p>
-          <Link to="/users" style={{ textDecoration: "none" }}>
-          <li>
-            <PeopleAltRoundedIcon className="icon" />
-            <span>Users</span>
-          </li>
+          <Link to="/users" style={{textDecoration: 'none'}}>
+            <li>
+              <PeopleAltRoundedIcon className="icon" />
+              <span>Users</span>
+            </li>
           </Link>
-          <Link to="/products" style={{ textDecoration: "none" }}>
-          <li>
-            <CategoryRoundedIcon className="icon" />
-            <span>Products</span>
-          </li>
+          <Link to="/products" style={{textDecoration: 'none'}}>
+            <li>
+              <CategoryRoundedIcon className="icon" />
+              <span>Products</span>
+            </li>
           </Link>
           <li>
             <Inventory2RoundedIcon className="icon" />
@@ -89,8 +88,8 @@ export const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption" onClick={()=>dispatch({type:"LIGHT"})}></div>
-        <div className="colorOption" onClick={()=>dispatch({type:"DARK"})}></div>
+        <div className="colorOption" onClick={() => dispatch({type: 'LIGHT'})}></div>
+        <div className="colorOption" onClick={() => dispatch({type: 'DARK'})}></div>
       </div>
     </div>
   );
