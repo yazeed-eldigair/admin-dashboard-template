@@ -1,0 +1,1 @@
+Template dashboard used for administrative tasks.
